@@ -1,0 +1,5 @@
+{
+  "name": "Public Wi-Fi Security Awareness Research Portal",
+  "description": "An interactive web application to collect, visualize, and report on data related to public Wi-Fi usage, user perceptions, and security awareness. Features a live analysis dashboard, an anonymous survey, and a security knowledge test.",
+  "requestFramePermissions": []
+}

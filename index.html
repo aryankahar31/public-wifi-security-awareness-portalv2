@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2361dca3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z'/%3E%3Cpath d='M2 12H22'/%3E%3Cpath d='M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C21.9992 9.04359 20.8413 6.22037 18.8284 4.17157C16.8156 2.12278 14.1844 1.00078 12 2Z'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Wi-Fi Security Research Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#61dca3',
+              secondary: '#61b3dc',
+              background: {
+                light: '#f0f4f8',
+                dark: '#0A0C10',
+              },
+              card: {
+                light: 'rgba(255, 255, 255, 0.85)',
+                dark: 'rgba(22, 27, 34, 0.85)',
+              },
+              input: {
+                 light: '#e8edf2',
+                 dark: '#0d1117',
+              },
+              text: {
+                primary: {
+                  light: '#1e293b',
+                  dark: '#e6edf3',
+                },
+                secondary: {
+                  light: '#475569',
+                  dark: '#aab2bb',
+                }
+              },
+              border: {
+                light: '#cbd5e1',
+                dark: '#30363d',
+              },
+              correct: '#28a745',
+              incorrect: '#dc3545',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+            backdropBlur: {
+              xl: '20px',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000;
+        color: #e6edf3;
+      }
+      .light body {
+        background-color: #f0f4f8;
+        color: #1e293b;
+      }
+      
+      /* --- Glitch Background Styles --- */
+      #glitch-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1; /* Placed behind content */
+          background-color: #000;
+          overflow: hidden;
+      }
+
+      #glitch-background {
+          display: block;
+          width: 100%;
+          height: 100%;
+      }
+
+      #outer-vignette {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);
+      }
+      /* Professional scrollbar masking */
+.scrollbar-hide {
+  overflow-x: auto;
+  scrollbar-width: auto; /* keeps scrolling behavior */
+  padding-bottom: 8px; /* pushes scrollbar out of view */
+  margin-bottom: -8px; /* pulls content back visually */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  height: 8px; /* required but hidden via masking */
+}
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^5.0.2",
+    "jspdf": "https://aistudiocdn.com/jspdf@^3.0.3",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.417.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
